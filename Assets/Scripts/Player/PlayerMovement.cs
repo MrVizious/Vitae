@@ -88,4 +88,11 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(context.ReadValue<Vector2>());
     }
 
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.tag.Equals("Obstacle"))
+        {
+            EndDash();
+        }
+    }
+
 }

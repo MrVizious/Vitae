@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public PlayerData player;
-    private float currentHealth;
+    [SerializeField] private float currentHealth;
 
     private void Start() {
         currentHealth = player.maxHealth;
@@ -22,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
     public void Die() {
         //TODO: Implement event via ScriptableObject
         Destroy(gameObject);
+        SceneController.QuitGame();
     }
 
 }

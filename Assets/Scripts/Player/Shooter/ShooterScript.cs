@@ -11,9 +11,8 @@ public class ShooterScript : MonoBehaviour
     public void Shoot(InputAction.CallbackContext context) {
         if (context.started)
         {
-            //Debug.Log("Shot!");
             GameObject newProjectile = Instantiate(projectile, transform.position, transform.rotation);
-            newProjectile.GetComponent<ProjectileScript>().direction = player.lookDirection;
+            newProjectile.GetComponent<ProjectileScript>().direction = player.lookDirection.normalized;
         }
     }
 }

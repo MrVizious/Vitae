@@ -6,12 +6,21 @@ using UnityEngine;
 public class PlayerData : ScriptableObject
 {
 
+    [Header("Health Data")]
+    public float maxHealth;
+
+
+    [Space(10)]
+
+
     [Header("Movement Variables")]
     public float movementSpeed = 5f;
     [HideInInspector] public Vector2 movementDirection;
     [HideInInspector] public Vector2 lookDirection;
 
+
     [Space(10)]
+
 
     [Header("Dash Variables")]
     public float dashDuration = 0.3f;

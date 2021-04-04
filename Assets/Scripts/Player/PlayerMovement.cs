@@ -63,6 +63,8 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator DashCoroutine(Vector2 direction, float duration, float speed) {
         Debug.Log("Dash initiated!");
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
+        Debug.Log("Collisions DISBALED between layers " + LayerMask.NameToLayer("Player") + " and " + LayerMask.NameToLayer("Enemy"));
         dashParticles.Play();
         float timeSinceDashStarted = 0f;
         while (timeSinceDashStarted < duration)
@@ -77,6 +79,8 @@ public class PlayerMovement : MonoBehaviour
     public void EndDash() {
         StopCoroutine(dashCoroutine);
         dashCoroutine = null;
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
+        Debug.Log("Collisions ENABLED between layers " + LayerMask.NameToLayer("Player") + " and " + LayerMask.NameToLayer("Enemy"));
         dashParticles.Stop();
     }
 

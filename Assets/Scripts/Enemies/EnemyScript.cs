@@ -6,7 +6,20 @@ public class EnemyScript : MonoBehaviour
 {
     public EnemyData enemy;
 
-    public void Damage(float damageAmount) {
+    private float currentHealth;
 
+    private void Start() {
+        currentHealth = enemy.maxHealth;
+    }
+    public void Damage(float damageAmount) {
+        currentHealth -= damageAmount;
+        if (currentHealth <= 0f)
+        {
+            Die();
+        }
+    }
+
+    public void Die() {
+        Destroy(gameObject);
     }
 }

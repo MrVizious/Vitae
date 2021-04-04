@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerAnimation : MonoBehaviour
 {
+    public PlayerData player;
     private Animator animator;
     private Camera mainCam;
     private void Start() {
@@ -13,25 +14,13 @@ public class PlayerAnimation : MonoBehaviour
     }
 
     private void Update() {
-        SetOrientationMouse();
+        UpdateLookAnimation();
     }
 
-    public void SetOrientationController(InputAction.CallbackContext context) {
-        //Debug.Log("Orientation changed");
-        Vector2 lookOrientation = context.ReadValue<Vector2>();
+    public void UpdateLookAnimation() {
 
-        animator.SetFloat("Look_X", lookOrientation.x);
-        animator.SetFloat("Look_Y", lookOrientation.y);
-    }
-
-    public void SetOrientationMouse() {
-        Vector3 worldPos = mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        Vector3 diff = (Vector3)worldPos - transform.position;
-        diff.Normalize();
-        //Debug.Log("New orientation: " + diff);
-
-        animator.SetFloat("Look_X", diff.x);
-        animator.SetFloat("Look_Y", diff.y);
+        animator.SetFloat("Look_X", player.lookDirection.x);
+        animator.SetFloat("Look_Y", player.lookDirection.y);
 
     }
 

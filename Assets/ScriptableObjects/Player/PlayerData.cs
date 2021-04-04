@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "PlayerData", menuName = "ScriptableObjects/PlayerData", order = 1)]
+public class PlayerData : ScriptableObject
+{
+
+    /*
+     *
+     * DATA
+     *
+    */
+
+    [Header("Movement Variables")]
+    public float movementSpeed = 2f;
+    [HideInInspector] public Vector2 movementDirection;
+    [HideInInspector] public Vector2 lookDirection;
+
+    [Space(10)]
+
+    [Header("Dash Variables")]
+    public float dashDuration = 0.3f;
+    public float dashSpeed = 25f;
+}

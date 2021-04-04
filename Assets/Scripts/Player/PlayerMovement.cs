@@ -5,28 +5,23 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Movement Variables")]
-    public float movementSpeed = 2f;
-
-    [Space(10)]
-
-    [Header("Dash Variables")]
-    public float dashDuration = 0.3f;
-    public float dashSpeed = 25f;
+    public PlayerData player;
     public ParticleSystem dashParticles;
 
     private Rigidbody2D rb;
-    private Vector2 movementDirection;
-    private Vector2 lookDirection;
 
     private IEnumerator dashCoroutine;
+    private Camera mainCam;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
+        mainCam = Camera.main;
         dashCoroutine = null;
-        lookDirection = transform.up;
     }
 
+    private void Update() {
+        UpdateLookDirection();
+    }
     private void FixedUpdate() {
         Move();
     }
@@ -35,22 +30,30 @@ public class PlayerMovement : MonoBehaviour
     public void Move() {
         if (dashCoroutine == null)
         {
-            rb.MovePosition((Vector2)transform.position + movementDirection * movementSpeed * Time.fixedDeltaTime);
+            rb.MovePosition((Vector2)transform.position + player.movementDirection * player.movementSpeed * Time.fixedDeltaTime);
         }
     }
 
     public void MovementDirectionChanged(InputAction.CallbackContext context) {
         Debug.Log("Input: " + context.ReadValue<Vector2>());
-        movementDirection = context.ReadValue<Vector2>();
+        player.movementDirection = context.ReadValue<Vector2>();
+    }
+
+    private void UpdateLookDirection() {
+        Vector3 worldPos = mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        Vector3 diff = (Vector3)worldPos - transform.position;
+        diff.Normalize();
+
+        player.lookDirection = diff;
     }
 
     public void Dash(InputAction.CallbackContext context) {
         Debug.Log("Dash started!");
         if (context.started && dashCoroutine == null)
         {
-            Vector2 dashDirection = movementDirection;
-            if (dashDirection.magnitude < 0.1f) dashDirection = lookDirection;
-            dashCoroutine = DashCoroutine(dashDirection, dashDuration, dashSpeed);
+            Vector2 dashDirection = player.movementDirection;
+            if (dashDirection.magnitude < 0.1f) dashDirection = player.lookDirection;
+            dashCoroutine = DashCoroutine(dashDirection, player.dashDuration, player.dashSpeed);
             StartCoroutine(dashCoroutine);
         }
         else

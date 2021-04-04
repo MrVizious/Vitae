@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b289ba7274542278ed973291853e39, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  movementSpeed: 5
   movementDirection: {x: 0, y: 0}
-  lookDirection: {x: 0, y: 0}
+  lookDirection: {x: 0.7630812, y: 0.27233332}
   dashDuration: 0.3
-  dashSpeed: 25
+  dashSpeed: 80

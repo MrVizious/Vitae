@@ -6,14 +6,8 @@ using UnityEngine;
 public class PlayerData : ScriptableObject
 {
 
-    /*
-     *
-     * DATA
-     *
-    */
-
     [Header("Movement Variables")]
-    public float movementSpeed = 2f;
+    public float movementSpeed = 5f;
     [HideInInspector] public Vector2 movementDirection;
     [HideInInspector] public Vector2 lookDirection;
 
@@ -21,5 +15,5 @@ public class PlayerData : ScriptableObject
 
     [Header("Dash Variables")]
     public float dashDuration = 0.3f;
-    public float dashSpeed = 25f;
+    public float dashSpeed = 80;
 }

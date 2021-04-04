@@ -18,15 +18,9 @@ public class PlayerAnimation : MonoBehaviour
     }
 
     public void UpdateLookAnimation() {
-
         animator.SetFloat("Look_X", player.lookDirection.x);
         animator.SetFloat("Look_Y", player.lookDirection.y);
-
+        animator.SetFloat("Speed", player.movementDirection.magnitude);
     }
 
-    public void SetMovementSpeed(InputAction.CallbackContext context) {
-        float speed = context.ReadValue<Vector2>().magnitude;
-        animator.SetFloat("Speed", speed);
-        Debug.Log(animator.GetFloat("Speed"));
-    }
 }

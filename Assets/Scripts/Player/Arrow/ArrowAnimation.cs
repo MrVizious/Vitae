@@ -12,6 +12,5 @@ public class ArrowAnimation : MonoBehaviour
     public void SetArrowOrientation() {
         float rot_z = Mathf.Atan2(player.lookDirection.y, player.lookDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
-
     }
 }

@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Projectile
+  - Enemy
+  - Obstacle
+  - Pit
   layers:
   - Default
   - TransparentFX
@@ -11,11 +15,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Obstacle
+  - Projectile
+  - Pit
   - 
   - 
   - 
@@ -40,4 +44,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2223455045
+    locked: 0
+  - name: Obstacles
+    uniqueID: 3364338159
+    locked: 0
+  - name: Enemies
+    uniqueID: 1293602739
+    locked: 0
+  - name: Projectiles
+    uniqueID: 228443453
+    locked: 0
+  - name: Player
+    uniqueID: 3038543445
     locked: 0

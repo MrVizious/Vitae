@@ -27,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
         secondsSinceLastSpawn += Time.deltaTime;
         if (secondsSinceLastSpawn >= secondsBetweenSpawns)
         {
-            secondsBetweenSpawns = 0f;
+            secondsSinceLastSpawn = 0f;
             Spawn();
         }
     }
@@ -38,10 +38,11 @@ public class EnemySpawner : MonoBehaviour
         Vector2 newPosition;
         do
         {
-            newPosition = (Vector2)transform.position + new Vector2(Random.Range(0, radius), Random.Range(0, radius));
+            newPosition = (Vector2)transform.position + new Vector2(Random.Range(-radius, radius), Random.Range(-radius, radius));
             anyCollision = Physics2D.OverlapCircle(newPosition, 5f);
         }
         while (anyCollision != null);
+        //Debug.Log("Spawning");
         GameObject newGameObject = Instantiate(enemyPrefabs[n], newPosition, Quaternion.identity);
         newGameObject.GetComponent<AIDestinationSetter>().target = target.transform;
     }

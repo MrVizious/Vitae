@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc0bbfb7cf1e6c73b8df575bfd0e8ca, type: 3}
   m_Name: HardEnemy
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  speed: 0
-  contactDamage: 0
+  maxHealth: 100
+  speed: 4
+  contactDamage: 20

@@ -77,14 +77,17 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void EndDash() {
-        StopCoroutine(dashCoroutine);
-        dashCoroutine = null;
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
+        if (dashCoroutine != null)
+        {
+            StopCoroutine(dashCoroutine);
+            dashCoroutine = null;
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
 
-        //TODO: Check if user is on pit when ending (https://docs.unity3d.com/ScriptReference/Physics2D.OverlapPoint.html)
+            //TODO: Check if user is on pit when ending (https://docs.unity3d.com/ScriptReference/Physics2D.OverlapPoint.html)
 
-        Debug.Log("Collisions ENABLED between layers " + LayerMask.NameToLayer("Player") + " and " + LayerMask.NameToLayer("Enemy"));
-        dashParticles.Stop();
+            Debug.Log("Collisions ENABLED between layers " + LayerMask.NameToLayer("Player") + " and " + LayerMask.NameToLayer("Enemy"));
+            dashParticles.Stop();
+        }
     }
 
     public void DebugMouse(InputAction.CallbackContext context) {

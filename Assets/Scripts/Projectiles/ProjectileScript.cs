@@ -25,7 +25,7 @@ public class ProjectileScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if ((projectile.targetsLayerMask | 1 << other.gameObject.layer) == projectile.targetsLayerMask)
         {
-            other.gameObject.GetComponent<EnemyScript>()?.Damage(projectile.damage);
+            other.gameObject.GetComponent<Enemy>()?.Damage(projectile.damage);
             DestroyProjectile();
         }
     }

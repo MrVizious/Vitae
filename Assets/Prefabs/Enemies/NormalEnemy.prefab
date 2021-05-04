@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 32085000495745514}
   - component: {fileID: 32085000495745518}
   - component: {fileID: 32085000495745517}
-  - component: {fileID: 32085000495745516}
   - component: {fileID: 32085000495745523}
+  - component: {fileID: 2209727341774036406}
   m_Layer: 7
   m_Name: NormalEnemy
   m_TagString: Enemy
@@ -182,19 +182,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.29413152
---- !u!114 &32085000495745516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32085000495745515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14ce7fd9c32f9db49afd574bae36b824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 11400000, guid: 3fe46ab4b43c8752bb4105e382a1eed3, type: 2}
 --- !u!50 &32085000495745523
 Rigidbody2D:
   serializedVersion: 4
@@ -216,3 +203,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2209727341774036406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32085000495745515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160b9b7509cc4ac4c81f41a667935002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 3fe46ab4b43c8752bb4105e382a1eed3, type: 2}
+  currentHealth: 0

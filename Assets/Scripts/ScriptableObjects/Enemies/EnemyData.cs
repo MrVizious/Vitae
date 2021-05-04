@@ -7,5 +7,6 @@ public class EnemyData : ScriptableObject
 {
     public float maxHealth;
     public float speed;
-    public float contactDamage;
+    public float damage;
+    public float delay;
 }

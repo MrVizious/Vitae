@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public bool debug = false;
     public PlayerData player;
     [SerializeField] private float currentHealth;
 
@@ -12,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void Damage(float damageAmount) {
+        if (debug) Debug.Log("Getting " + damageAmount + " points of damage");
         currentHealth -= damageAmount;
         if (currentHealth <= 0)
         {

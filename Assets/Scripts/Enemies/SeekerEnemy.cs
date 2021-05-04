@@ -38,7 +38,6 @@ public class SeekerEnemy : Enemy
                 damagingCoroutine = null;
             }
         }
-
     }
 
     private IEnumerator DamagingCoroutine(PlayerHealth playerHealth) {

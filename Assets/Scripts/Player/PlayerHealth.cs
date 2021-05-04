@@ -26,5 +26,4 @@ public class PlayerHealth : MonoBehaviour
         Destroy(gameObject);
         SceneController.QuitGame();
     }
-
 }

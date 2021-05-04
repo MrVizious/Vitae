@@ -5168,6 +5168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e2780bf1be14d3d98c7551b86de93a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 1
   player: {fileID: 11400000, guid: 876f3514afb25349686c789423864634, type: 2}
   currentHealth: 0
 --- !u!4 &304759881
@@ -5351,7 +5352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &504317579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5365,7 +5366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 3085205339383701861, guid: 62eff57ab03f94ed2bda0a5895dce8bb, type: 3}
+  - {fileID: 2976049384333327675, guid: 62eff57ab03f94ed2bda0a5895dce8bb, type: 3}
   - {fileID: 32085000495745515, guid: ab6d32282233ac954a426c42fb89b2a3, type: 3}
   - {fileID: 32085000495745515, guid: ab6d32282233ac954a426c42fb89b2a3, type: 3}
   radius: 15
@@ -11243,6 +11244,10 @@ PrefabInstance:
     - target: {fileID: 2976049384333327675, guid: 62eff57ab03f94ed2bda0a5895dce8bb, type: 3}
       propertyPath: m_Name
       value: HardEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4739281353220138933, guid: 62eff57ab03f94ed2bda0a5895dce8bb, type: 3}
+      propertyPath: debug
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7766059140230228670, guid: 62eff57ab03f94ed2bda0a5895dce8bb, type: 3}
       propertyPath: target

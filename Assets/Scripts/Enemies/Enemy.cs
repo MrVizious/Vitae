@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Pathfinding;
 using UnityEngine;
 
+[RequireComponent(typeof(Seeker))]
+[RequireComponent(typeof(AIPath))]
+[RequireComponent(typeof(AIDestinationSetter))]
 public abstract class Enemy : MonoBehaviour
 {
     public bool debug = false;

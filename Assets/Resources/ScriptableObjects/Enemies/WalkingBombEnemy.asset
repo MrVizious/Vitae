@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1cc0bbfb7cf1e6c73b8df575bfd0e8ca, type: 3}
-  m_Name: HardSeekerEnemy
+  m_Name: WalkingBombEnemy
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  speed: 4
-  damage: 40
-  delay: 2
-  range: 0
+  maxHealth: 50
+  speed: 1
+  damage: 80
+  delay: 1
+  range: 3

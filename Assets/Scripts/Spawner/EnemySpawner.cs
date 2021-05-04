@@ -44,7 +44,7 @@ public class EnemySpawner : MonoBehaviour
         while (anyCollision != null);
         //Debug.Log("Spawning");
         GameObject newGameObject = Instantiate(enemyPrefabs[n], newPosition, Quaternion.identity);
-        newGameObject.GetComponent<AIDestinationSetter>().target = target.transform;
+        newGameObject.GetComponent<Enemy>().SetTarget(target.transform);
     }
 
 

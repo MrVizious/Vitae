@@ -28,4 +28,12 @@ public abstract class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void SetTarget(Transform newTarget) {
+        GetComponent<AIDestinationSetter>().target = newTarget;
+    }
+
+    public Transform GetTarget() {
+        return GetComponent<AIDestinationSetter>().target;
+    }
+
 }

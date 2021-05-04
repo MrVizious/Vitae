@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class WalkingBombEnemy : Enemy
 {
+    public Sprite explosionSprite;
 
     protected override void Die() {
         StartCoroutine(ExplodeCoroutine());

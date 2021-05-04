@@ -7,9 +7,19 @@ public class WalkingBombEnemy : Enemy
 {
     public Sprite explosionSprite;
 
+    private void Update() {
+        if (Vector2.Distance(transform.position, GetTarget().position) < data.range)
+        {
+            if (debug) Debug.Log("Player found nearby");
+            path.maxSpeed = 0;
+            Die();
+        }
+    }
+
     protected override void Die() {
         StartCoroutine(ExplodeCoroutine());
     }
+
     private void Explode() {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position,
         data.range);

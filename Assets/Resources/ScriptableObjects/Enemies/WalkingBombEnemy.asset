@@ -15,5 +15,5 @@ MonoBehaviour:
   maxHealth: 50
   speed: 1
   damage: 80
-  delay: 1
+  delay: 4
   range: 3

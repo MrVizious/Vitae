@@ -13,9 +13,23 @@ public abstract class Enemy : MonoBehaviour
 
     [SerializeField] protected float currentHealth;
 
+    protected AIPath path;
+    protected Seeker seeker;
+    protected AIDestinationSetter destinationSetter;
+
     protected virtual void Start() {
+
+        // Get component references
+        path = GetComponent<AIPath>();
+        seeker = GetComponent<Seeker>();
+        destinationSetter = GetComponent<AIDestinationSetter>();
+
+        // Attribute setting
         currentHealth = data.maxHealth;
+        path.maxSpeed = data.speed;
+
     }
+
     public virtual void Damage(float damageAmount) {
         currentHealth -= damageAmount;
         if (currentHealth <= 0f)
@@ -29,11 +43,11 @@ public abstract class Enemy : MonoBehaviour
     }
 
     public void SetTarget(Transform newTarget) {
-        GetComponent<AIDestinationSetter>().target = newTarget;
+        destinationSetter.target = newTarget;
     }
 
     public Transform GetTarget() {
-        return GetComponent<AIDestinationSetter>().target;
+        return destinationSetter.target;
     }
 
 }

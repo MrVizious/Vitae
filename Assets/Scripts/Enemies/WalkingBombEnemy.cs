@@ -6,7 +6,14 @@ using UnityEngine;
 public class WalkingBombEnemy : Enemy
 {
     public Sprite explosionSprite;
+    public float explosionAnimationTime = 0.2f;
+    private SpriteRenderer spriteRenderer;
+    private IEnumerator explodeCoroutine = null;
 
+    protected override void Start() {
+        base.Start();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
     private void Update() {
         if (Vector2.Distance(transform.position, GetTarget().position) < data.range)
         {
@@ -17,7 +24,11 @@ public class WalkingBombEnemy : Enemy
     }
 
     protected override void Die() {
-        StartCoroutine(ExplodeCoroutine());
+        if (explodeCoroutine == null)
+        {
+            explodeCoroutine = ExplodeCoroutine();
+            StartCoroutine(explodeCoroutine);
+        }
     }
 
     private void Explode() {
@@ -39,6 +50,22 @@ public class WalkingBombEnemy : Enemy
     private IEnumerator ExplodeCoroutine() {
         yield return new WaitForSeconds(data.delay);
         Explode();
-        Destroy(this.gameObject);
+        StartCoroutine(ExplosionAnimationCoroutine());
+        Destroy(this.gameObject, explosionAnimationTime);
     }
+
+    private IEnumerator ExplosionAnimationCoroutine() {
+        GetComponent<Collider2D>().enabled = false;
+        spriteRenderer.sprite = explosionSprite;
+        spriteRenderer.color = Color.red;
+        float timeExploded = 0;
+        while (timeExploded < explosionAnimationTime)
+        {
+            yield return null;
+            timeExploded += Time.deltaTime;
+            float size = FloatExtensionMethods.Map(timeExploded, 0, explosionAnimationTime, 0, data.range);
+            transform.localScale = new Vector2(size, size);
+        }
+    }
+
 }

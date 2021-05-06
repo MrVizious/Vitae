@@ -9,13 +9,13 @@ public class SimpleProjectile : ProjectileScript
         secondsAlive = 0f;
     }
 
-    private void FixedUpdate() {
-        secondsAlive += Time.fixedDeltaTime;
+    private void Update() {
+        secondsAlive += Time.deltaTime;
         if (secondsAlive > data.maxSecondsAlive)
         {
             DestroyProjectile();
         }
-        transform.position += (Vector3)direction * data.speed * Time.fixedDeltaTime;
+        transform.position += (Vector3)direction * data.speed * Time.deltaTime;
     }
 
     private void OnCollisionEnter2D(Collision2D other) {

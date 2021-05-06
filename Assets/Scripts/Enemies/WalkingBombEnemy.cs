@@ -18,7 +18,6 @@ public class WalkingBombEnemy : Enemy
         if (Vector2.Distance(transform.position, GetTarget().position) < data.range)
         {
             if (debug) Debug.Log("Player found nearby");
-            path.maxSpeed = 0;
             Die();
         }
     }
@@ -26,6 +25,7 @@ public class WalkingBombEnemy : Enemy
     protected override void Die() {
         if (explodeCoroutine == null)
         {
+            path.maxSpeed = 0;
             explodeCoroutine = ExplodeCoroutine();
             StartCoroutine(explodeCoroutine);
         }

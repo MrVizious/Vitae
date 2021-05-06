@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateLookDirection() {
         Vector3 worldPos = mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        Vector3 diff = (Vector3)worldPos - transform.position;
+        Vector3 diff = (Vector3)worldPos - transform.position - (Vector3)Vector2.up * 0.3f;
         diff.Normalize();
 
         player.lookDirection = diff;

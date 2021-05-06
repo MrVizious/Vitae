@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ArrowAnimation : MonoBehaviour
+public class VitaeAnimation : MonoBehaviour
 {
     public PlayerData player;
     private void Update() {

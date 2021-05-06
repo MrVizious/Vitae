@@ -2,36 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileScript : MonoBehaviour
+public abstract class ProjectileScript : MonoBehaviour
 {
-    public ProjectileData projectile;
+    public ProjectileData data;
 
-    public Vector2 direction;
+    protected Vector2 direction;
 
-    private float secondsAlive;
-    private void Start() {
-        secondsAlive = 0f;
-    }
-
-    private void FixedUpdate() {
-        secondsAlive += Time.fixedDeltaTime;
-        if (secondsAlive > projectile.maxSecondsAlive)
-        {
-            DestroyProjectile();
-        }
-        transform.position += (Vector3)direction * projectile.speed * Time.fixedDeltaTime;
-    }
-
-    private void OnCollisionEnter2D(Collision2D other) {
-        if ((projectile.targetsLayerMask | 1 << other.gameObject.layer) == projectile.targetsLayerMask)
-        {
-            other.gameObject.GetComponent<Enemy>()?.Damage(projectile.damage);
-            DestroyProjectile();
-        }
-    }
 
     public void DestroyProjectile() {
         Debug.Log("Destroying projectile");
         Destroy(gameObject);
+    }
+
+    public void SetDirection(Vector2 newDirection) {
+        direction = newDirection;
     }
 }

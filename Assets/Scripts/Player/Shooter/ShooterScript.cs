@@ -12,7 +12,7 @@ public class ShooterScript : MonoBehaviour
         if (context.started)
         {
             GameObject newProjectile = Instantiate(projectile, transform.position, transform.rotation);
-            newProjectile.GetComponent<ProjectileScript>().direction = player.lookDirection.normalized;
+            newProjectile.GetComponent<ProjectileScript>().SetDirection(player.lookDirection.normalized);
         }
     }
 }

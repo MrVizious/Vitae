@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6906731568505224133}
   - component: {fileID: -1022869684816983189}
   m_Layer: 9
-  m_Name: Projectile
+  m_Name: SimpleProjectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,11 +44,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6803217761788689643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8514472e09568f68bb4ac9968740c6d, type: 3}
+  m_Script: {fileID: 11500000, guid: d33a67263d0656390a2efb412633fae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 11400000, guid: 1570cc5052b4fbf1aac246d3cb324865, type: 2}
-  direction: {x: 0, y: 0}
+  data: {fileID: 11400000, guid: 1570cc5052b4fbf1aac246d3cb324865, type: 2}
 --- !u!212 &6803217761788689639
 SpriteRenderer:
   m_ObjectHideFlags: 0

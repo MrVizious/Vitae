@@ -64,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator DashCoroutine(Vector2 direction, float duration, float speed) {
         Debug.Log("Dash initiated!");
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
+        //TODO: Change to enemyProjectile
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Projectile"), true);
         Debug.Log("Collisions DISABLED between layers " + LayerMask.NameToLayer("Player") + " and " + LayerMask.NameToLayer("Enemy"));
         dashParticles.Play();
@@ -82,7 +83,9 @@ public class PlayerMovement : MonoBehaviour
         {
             StopCoroutine(dashCoroutine);
             dashCoroutine = null;
+
             Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
+            //TODO: Change to enemyProjectile
             Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Projectile"), false);
 
             //TODO: Check if user is on pit when ending (https://docs.unity3d.com/ScriptReference/Physics2D.OverlapPoint.html)

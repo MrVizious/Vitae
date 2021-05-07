@@ -63,10 +63,11 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator DashCoroutine(Vector2 direction, float duration, float speed) {
         Debug.Log("Dash initiated!");
+
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
-        //TODO: Change to enemyProjectile
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Projectile"), true);
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("EnemyProjectile"), true);
         Debug.Log("Collisions DISABLED between layers " + LayerMask.NameToLayer("Player") + " and " + LayerMask.NameToLayer("Enemy"));
+
         dashParticles.Play();
         float timeSinceDashStarted = 0f;
         while (timeSinceDashStarted < duration)
@@ -85,8 +86,8 @@ public class PlayerMovement : MonoBehaviour
             dashCoroutine = null;
 
             Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
-            //TODO: Change to enemyProjectile
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Projectile"), false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("EnemyProjectile"), false);
+            Debug.Log("Collisions ENABLED between layers " + LayerMask.NameToLayer("Player") + " and " + LayerMask.NameToLayer("Enemy"));
 
             //TODO: Check if user is on pit when ending (https://docs.unity3d.com/ScriptReference/Physics2D.OverlapPoint.html)
             Debug.Log("Collisions ENABLED between layers " + LayerMask.NameToLayer("Player") + " and " + LayerMask.NameToLayer("Enemy"));

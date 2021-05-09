@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a4be662f89a1868cbf890f7c12ce380, type: 3}
-  m_Name: Character
+  m_Name: Vitae
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  characterName: 
+  sprite: {fileID: 21300000, guid: b3dad48f77fa27abb8f81f2b9656f49a, type: 3}
+  characterName: Vitae

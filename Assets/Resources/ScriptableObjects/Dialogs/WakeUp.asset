@@ -12,3 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d4df1d6ce939af8e8bf675ce27cc585, type: 3}
   m_Name: WakeUp
   m_EditorClassIdentifier: 
+  sentences:
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Arriba, despierta!
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Venga, arriba!
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Nnngh?
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Que despiertes, le\xF1e!"
+    secondsPerCharacter: 0.05
+  currentSentenceIndex: 4

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a4be662f89a1868cbf890f7c12ce380, type: 3}
   m_Name: Javi
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  characterName: 
+  sprite: {fileID: 21300000, guid: ee73130b7fe9fcb80b752a4729eac412, type: 3}
+  characterName: Javi

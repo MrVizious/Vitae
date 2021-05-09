@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -13,17 +14,21 @@ public class DialogController : MonoBehaviour
     public TextMeshProUGUI characterName;
     public DialogData dialog;
     public bool speaking = false;
+    public UnityEvent OnDialogEnded;
+    private static DialogController instance;
 
-    private void Start() {
-        if (speaking)
+    private void Awake() {
+        if (instance == null)
         {
-            BeginDialog(dialog);
+            instance = this;
         }
-        else
-        {
-            canvas.SetActive(false);
-        }
+
     }
+
+    public static DialogController getInstance() {
+        return instance;
+    }
+
     public void Advance(InputAction.CallbackContext context) {
         if (context.started && speaking)
         {
@@ -58,6 +63,7 @@ public class DialogController : MonoBehaviour
         Time.timeScale = 1;
         speaking = false;
         canvas.SetActive(speaking);
+        OnDialogEnded.Invoke();
     }
 
     public void setDialog(DialogData newDialog) {

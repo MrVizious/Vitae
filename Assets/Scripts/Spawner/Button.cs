@@ -19,5 +19,4 @@ public class Button : MonoBehaviour
             OnActivated.Invoke();
         }
     }
-
 }

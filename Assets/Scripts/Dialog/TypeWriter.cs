@@ -6,11 +6,14 @@ using UnityEngine;
 public class TypeWriter : MonoBehaviour
 {
     private TextMeshProUGUI text;
-    private IEnumerator typingCoroutine;
+    private IEnumerator typingCoroutine = null;
     private string textToType;
 
-    private void Start() {
+    private void Awake() {
+
         text = GetComponent<TextMeshProUGUI>();
+    }
+    private void Start() {
         if (text.text != null && text.text != "")
         {
             TypeText(text.text, 0.07f);

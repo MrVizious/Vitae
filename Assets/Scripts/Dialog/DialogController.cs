@@ -19,6 +19,10 @@ public class DialogController : MonoBehaviour
         {
             BeginDialog(dialog);
         }
+        else
+        {
+            canvas.SetActive(false);
+        }
     }
     public void Advance(InputAction.CallbackContext context) {
         if (context.started && speaking)

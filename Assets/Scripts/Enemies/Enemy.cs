@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Pathfinding;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Seeker))]
 [RequireComponent(typeof(AIPath))]
@@ -10,6 +11,7 @@ public abstract class Enemy : MonoBehaviour
 {
     public bool debug = false;
     public EnemyData data;
+    public UnityEvent OnDie;
 
     [SerializeField] protected float currentHealth;
 
@@ -19,14 +21,22 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Start() {
 
+    }
+
+    public virtual void Spawn(Transform newTarget) {
+
         // Get component references
         path = GetComponent<AIPath>();
         seeker = GetComponent<Seeker>();
         destinationSetter = GetComponent<AIDestinationSetter>();
 
+        OnDie = new UnityEvent();
         // Attribute setting
         currentHealth = data.maxHealth;
-        path.maxSpeed = data.speed;
+        if (path == null) { Debug.Log("Oh, crap, no path", this); }
+        else path.maxSpeed = data.speed;
+
+        SetTarget(newTarget);
 
     }
 
@@ -39,7 +49,8 @@ public abstract class Enemy : MonoBehaviour
     }
 
     protected virtual void Die() {
-        Destroy(gameObject);
+        OnDie.Invoke();
+        gameObject.SetActive(false);
     }
 
     public void SetTarget(Transform newTarget) {

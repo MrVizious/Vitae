@@ -51,7 +51,6 @@ public class WalkingBombEnemy : Enemy
         yield return new WaitForSeconds(data.delay);
         Explode();
         StartCoroutine(ExplosionAnimationCoroutine());
-        Destroy(this.gameObject, explosionAnimationTime);
     }
 
     private IEnumerator ExplosionAnimationCoroutine() {
@@ -66,6 +65,7 @@ public class WalkingBombEnemy : Enemy
             float size = FloatExtensionMethods.Map(timeExploded, 0, explosionAnimationTime, 0, data.range);
             transform.localScale = new Vector2(size, size);
         }
+        base.Die();
     }
 
 }

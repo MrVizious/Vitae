@@ -3,16 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Dialog", menuName = "ScriptableObjects/Dialog", order = 1)]
-public class DialogScriptableObject : ScriptableObject
+public class DialogData : ScriptableObject
 {
     public List<Sentence> sentences;
-    private int currentSentenceIndex;
+    public int currentSentenceIndex;
 
-    private void Start() {
+    private void OnEnable() {
         currentSentenceIndex = 0;
     }
 
     public Sentence GetCurrentSentence() {
+        if (sentences.Count <= 0)
+        {
+            Debug.LogError("No sentences!");
+            return null;
+        }
+        if (currentSentenceIndex >= sentences.Count)
+        {
+            return null;
+        }
+
         Sentence returnSentence = sentences[currentSentenceIndex];
         currentSentenceIndex++;
         return returnSentence;
@@ -20,9 +30,10 @@ public class DialogScriptableObject : ScriptableObject
 }
 
 [System.Serializable]
-public struct Sentence
+public class Sentence
 {
     public Character character;
     public string text;
+    public float secondsPerCharacter;
 
 }

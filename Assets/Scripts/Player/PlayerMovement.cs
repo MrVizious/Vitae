@@ -35,29 +35,36 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void MovementDirectionChanged(InputAction.CallbackContext context) {
-        player.movementDirection = context.ReadValue<Vector2>();
+        if (Time.timeScale > 0f) player.movementDirection = context.ReadValue<Vector2>();
     }
 
     private void UpdateLookDirection() {
-        Vector3 worldPos = mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        Vector3 diff = (Vector3)worldPos - transform.position;
-        diff.Normalize();
+        if (Time.timeScale > 0f)
+        {
+            Vector3 worldPos = mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            Vector3 diff = (Vector3)worldPos - transform.position;
+            diff.Normalize();
 
-        player.lookDirection = diff;
+            player.lookDirection = diff;
+        }
     }
 
     public void Dash(InputAction.CallbackContext context) {
-        Debug.Log("Dash started!");
-        if (context.started && dashCoroutine == null)
+        if (Time.timeScale > 0f)
         {
-            Vector2 dashDirection = player.movementDirection;
-            if (dashDirection.magnitude < 0.1f) dashDirection = player.lookDirection;
-            dashCoroutine = DashCoroutine(dashDirection, player.dashDuration, player.dashSpeed);
-            StartCoroutine(dashCoroutine);
-        }
-        else
-        {
-            Debug.Log("Can't dash yet!");
+
+            Debug.Log("Dash started!");
+            if (context.started && dashCoroutine == null)
+            {
+                Vector2 dashDirection = player.movementDirection;
+                if (dashDirection.magnitude < 0.1f) dashDirection = player.lookDirection;
+                dashCoroutine = DashCoroutine(dashDirection, player.dashDuration, player.dashSpeed);
+                StartCoroutine(dashCoroutine);
+            }
+            else
+            {
+                Debug.Log("Can't dash yet!");
+            }
         }
     }
 

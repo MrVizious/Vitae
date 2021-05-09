@@ -31,19 +31,22 @@ public class RoomController : MonoBehaviour
     }
 
     public void SpawnEnemies() {
-        spawnedEnemies = new List<GameObject>();
-        foreach (GameObject enemy in enemies)
+        if (!cleared)
         {
-            Debug.Log("Spawning enemy!");
-            GameObject newEnemy = Instantiate(enemy, gameObject.transform);
-            newEnemy.SetActive(true);
-            newEnemy.GetComponent<Enemy>().Spawn(player);
-            newEnemy.GetComponent<Enemy>().OnDie.AddListener(
-                delegate
-                {
-                    OnEnemyDie(newEnemy);
-                }
-            );
+            spawnedEnemies = new List<GameObject>();
+            foreach (GameObject enemy in enemies)
+            {
+                Debug.Log("Spawning enemy!");
+                GameObject newEnemy = Instantiate(enemy, gameObject.transform);
+                newEnemy.SetActive(true);
+                newEnemy.GetComponent<Enemy>().Spawn(player);
+                newEnemy.GetComponent<Enemy>().OnDie.AddListener(
+                    delegate
+                    {
+                        OnEnemyDie(newEnemy);
+                    }
+                );
+            }
         }
     }
 
@@ -60,6 +63,7 @@ public class RoomController : MonoBehaviour
         Destroy(enemyKilled);
         if (spawnedEnemies.Count <= 0)
         {
+            cleared = true;
             OnRoomCleared.Invoke();
         }
     }

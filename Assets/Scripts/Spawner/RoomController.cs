@@ -9,8 +9,8 @@ public class RoomController : MonoBehaviour
     public Transform player;
     public List<GameObject> enemies;
     public UnityEvent OnRoomCleared;
-    private List<GameObject> spawnedEnemies;
-    private bool cleared = false;
+    [SerializeField] private List<GameObject> spawnedEnemies;
+    [SerializeField] private bool cleared = false;
 
 
     void Start() {
@@ -31,7 +31,7 @@ public class RoomController : MonoBehaviour
     }
 
     public void SpawnEnemies() {
-        if (!cleared)
+        if (!cleared && spawnedEnemies.Count == 0)
         {
             spawnedEnemies = new List<GameObject>();
             foreach (GameObject enemy in enemies)
@@ -46,6 +46,7 @@ public class RoomController : MonoBehaviour
                         OnEnemyDie(newEnemy);
                     }
                 );
+                spawnedEnemies.Add(newEnemy);
             }
         }
     }

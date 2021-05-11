@@ -5727,14 +5727,14 @@ RectTransform:
   m_GameObject: {fileID: 648409202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.264999, y: 5.5099998, z: 0}
+  m_LocalScale: {x: 5.8959203, y: 3.9306135, z: 0}
   m_Children: []
   m_Father: {fileID: 1055888256}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 857, y: -307}
+  m_AnchoredPosition: {x: 600.68005, y: -299.98}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &648409204
@@ -10901,8 +10901,8 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 960, y: 540}
-  m_ScreenMatchMode: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -11017,14 +11017,14 @@ RectTransform:
   m_GameObject: {fileID: 1078368381}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.2336473, y: 5.0491276, z: 0}
+  m_LocalScale: {x: 3.7334747, y: 3.6018457, z: 0}
   m_Children: []
   m_Father: {fileID: 1055888256}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 857.4248, y: -307}
+  m_AnchoredPosition: {x: 600.98004, y: -299.98}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1175851695
@@ -14297,7 +14297,21 @@ MonoBehaviour:
   enemies: []
   OnRoomCleared:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  spawnedEnemies: []
+  cleared: 0
 --- !u!4 &1561656804
 Transform:
   m_ObjectHideFlags: 0
@@ -14344,7 +14358,7 @@ RectTransform:
   m_GameObject: {fileID: 1701504241}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 17.55, y: 11.7, z: 0}
+  m_LocalScale: {x: 12.519467, y: 8.346312, z: 0}
   m_Children:
   - {fileID: 272554992}
   - {fileID: 1901901928}
@@ -14353,7 +14367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -257, y: -310}
+  m_AnchoredPosition: {x: -194, y: -302.12}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701504243

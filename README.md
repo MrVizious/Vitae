@@ -7,4 +7,4 @@ CVs are boring, but videogames are fun! So why should a CV about videogames be b
 
 # Where to Play
 
-Most recent version can be found [here](https://mrvizious.github.io/Vitae/index.html)
+Most recent version can be found [here](https://mrvizious.github.io/Vitae)

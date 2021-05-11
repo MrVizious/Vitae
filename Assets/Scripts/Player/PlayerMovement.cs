@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         while (timeSinceDashStarted < duration)
         {
             rb.MovePosition((Vector2)transform.position + direction.normalized * speed * Time.deltaTime);
-            yield return null;
+            yield return new WaitForEndOfFrame();
             timeSinceDashStarted += Time.deltaTime;
         }
         EndDash();

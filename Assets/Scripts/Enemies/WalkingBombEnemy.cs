@@ -60,7 +60,7 @@ public class WalkingBombEnemy : Enemy
         float timeExploded = 0;
         while (timeExploded < explosionAnimationTime)
         {
-            yield return null;
+            yield return new WaitForEndOfFrame();
             timeExploded += Time.deltaTime;
             float size = FloatExtensionMethods.Map(timeExploded, 0, explosionAnimationTime, 0, data.range);
             transform.localScale = new Vector2(size, size);

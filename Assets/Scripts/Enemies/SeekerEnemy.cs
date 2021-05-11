@@ -43,7 +43,7 @@ public class SeekerEnemy : Enemy
     private IEnumerator DamagingCoroutine(PlayerHealth playerHealth) {
         while (true)
         {
-            yield return null;
+            yield return new WaitForEndOfFrame();
             secondsSinceLastDamage += Time.deltaTime;
             if (secondsSinceLastDamage >= data.delay)
             {

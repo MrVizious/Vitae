@@ -27,7 +27,7 @@ public class CutsceneIntro : MonoBehaviour
                 darkCanvas.color.b,
                 Mathf.Clamp(darkCanvas.color.a - fadeSpeed * Time.deltaTime, 0f, 1f)
             );
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
         Destroy(darkCanvas.gameObject);
         Destroy(gameObject);

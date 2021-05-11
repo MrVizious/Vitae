@@ -113,4 +113,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // Change to check if wall is in front before dashing. This behaviour right
+    // now is a hotfix to not dash against the wall indefinitely
+    private void OnCollisionStay2D(Collision2D other) {
+        if (other.gameObject.tag.Equals("Obstacle"))
+        {
+            EndDash();
+        }
+    }
+
 }

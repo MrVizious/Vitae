@@ -25,4 +25,6 @@ public class PlayerData : ScriptableObject
     [Header("Dash Variables")]
     public float dashDuration = 0.3f;
     public float dashSpeed = 80;
+
+    [HideInInspector] public bool isDashing = false;
 }

@@ -5205,6 +5205,7 @@ GameObject:
   - component: {fileID: 304759879}
   - component: {fileID: 304759880}
   - component: {fileID: 304759882}
+  - component: {fileID: 304759884}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -5225,7 +5226,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: 876f3514afb25349686c789423864634, type: 2}
-  dashParticles: {fileID: 47070119}
 --- !u!114 &304759880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5274,7 +5274,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2690577}
+  m_Offset: {x: 0, y: -0.03}
   m_Size: {x: 0.6331453, y: 0.4560318}
   m_Direction: 1
 --- !u!50 &304759883
@@ -5298,6 +5298,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &304759884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304759878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf28b6102af751d6835f189872c6c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: 876f3514afb25349686c789423864634, type: 2}
+  dashParticles: {fileID: 47070119}
 --- !u!1 &327106530
 GameObject:
   m_ObjectHideFlags: 0
@@ -10643,8 +10657,8 @@ MonoBehaviour:
     m_ActionName: Keyboard and Mouse/Look[/Mouse/position]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 304759879}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+      - m_Target: {fileID: 304759884}
+        m_TargetAssemblyTypeName: DashScript, Assembly-CSharp
         m_MethodName: Dash
         m_Mode: 0
         m_Arguments:
@@ -14213,7 +14227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513272508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 304759881}

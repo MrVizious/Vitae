@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CutsceneIntro : MonoBehaviour
+public class CutsceneIntro : Cutscene
 {
-    public Image darkCanvas;
-    public DialogData dialog;
+    public Image darkImage;
     public float fadeSpeed = 0.07f;
     private void Start() {
-        DialogController.getInstance().BeginDialog(dialog);
-
+        Begin();
         DialogController.getInstance().OnDialogEnded.AddListener(
             delegate
             {
@@ -20,19 +18,17 @@ public class CutsceneIntro : MonoBehaviour
     }
 
     private IEnumerator FadeAndShow() {
-        while (darkCanvas.color.a > 0.0f)
+        while (darkImage.color.a > 0.0f)
         {
-            darkCanvas.color = new Color(
-                darkCanvas.color.r,
-                darkCanvas.color.g,
-                darkCanvas.color.b,
-                Mathf.Clamp(darkCanvas.color.a - fadeSpeed * Time.deltaTime, 0f, 1f)
+            darkImage.color = new Color(
+                darkImage.color.r,
+                darkImage.color.g,
+                darkImage.color.b,
+                Mathf.Clamp(darkImage.color.a - fadeSpeed * Time.deltaTime, 0f, 1f)
             );
             yield return new WaitForEndOfFrame();
         }
-        Destroy(darkCanvas.transform.parent.gameObject);
+        Destroy(darkImage.transform.parent.gameObject);
         Destroy(gameObject);
     }
-
-
 }

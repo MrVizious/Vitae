@@ -29,7 +29,7 @@ public class SeekerEnemy : Enemy
         }
     }
 
-    private void OnCollisionExit2D(Collision2D other) {
+    protected void OnCollisionExit2D(Collision2D other) {
         if (other.gameObject.tag.Equals("Player"))
         {
             if (damagingCoroutine != null)
@@ -40,7 +40,7 @@ public class SeekerEnemy : Enemy
         }
     }
 
-    private IEnumerator DamagingCoroutine(PlayerHealth playerHealth) {
+    protected IEnumerator DamagingCoroutine(PlayerHealth playerHealth) {
         while (true)
         {
             yield return new WaitForEndOfFrame();

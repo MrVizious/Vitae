@@ -13,7 +13,7 @@ public abstract class Enemy : MonoBehaviour
     public EnemyData data;
     public UnityEvent OnDie;
 
-    [SerializeField] protected float currentHealth;
+    protected float currentHealth;
 
     protected AIPath path;
     protected Seeker seeker;

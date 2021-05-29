@@ -10,7 +10,7 @@ public abstract class ProjectileScript : MonoBehaviour
 
 
     public void DestroyProjectile() {
-        Debug.Log("Destroying projectile");
+        //Debug.Log("Destroying projectile");
         Destroy(gameObject);
     }
 

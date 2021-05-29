@@ -7,6 +7,7 @@ public class DashScript : MonoBehaviour
 {
     public PlayerData player;
     public ParticleSystem dashParticles;
+    public bool debug = false;
     private Rigidbody2D rb;
     private IEnumerator dashCoroutine = null;
     private bool walled = false;
@@ -29,23 +30,23 @@ public class DashScript : MonoBehaviour
                     dashCoroutine = DashCoroutine(dashDirection, player.dashDuration, player.dashSpeed);
                     StartCoroutine(dashCoroutine);
                 }
-                else Debug.Log("Can't dash against the wall");
+                else if (debug) Debug.Log("Can't dash against the wall");
             }
             else
             {
-                Debug.Log("Can't dash yet!");
+                if (debug) Debug.Log("Can't dash yet!");
             }
         }
     }
 
     private IEnumerator DashCoroutine(Vector2 direction, float duration, float speed) {
-        Debug.Log("Dash initiated!");
+        if (debug) Debug.Log("Dash initiated!");
 
         player.isDashing = true;
 
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("EnemyProjectile"), true);
-        Debug.Log("Collisions DISABLED between layers " + LayerMask.NameToLayer("Player") + " and " + LayerMask.NameToLayer("Enemy"));
+        if (debug) Debug.Log("Collisions DISABLED between layers " + LayerMask.NameToLayer("Player") + " and " + LayerMask.NameToLayer("Enemy"));
 
         dashParticles.Play();
         float timeSinceDashStarted = 0f;
@@ -66,10 +67,10 @@ public class DashScript : MonoBehaviour
 
             Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
             Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("EnemyProjectile"), false);
-            Debug.Log("Collisions ENABLED between layers " + LayerMask.NameToLayer("Player") + " and " + LayerMask.NameToLayer("Enemy"));
+            if (debug) Debug.Log("Collisions ENABLED between layers " + LayerMask.NameToLayer("Player") + " and " + LayerMask.NameToLayer("Enemy"));
 
             //TODO: Check if user is on pit when ending (https://docs.unity3d.com/ScriptReference/Physics2D.OverlapPoint.html)
-            Debug.Log("Collisions ENABLED between layers " + LayerMask.NameToLayer("Player") + " and " + LayerMask.NameToLayer("Enemy"));
+            if (debug) Debug.Log("Collisions ENABLED between layers " + LayerMask.NameToLayer("Player") + " and " + LayerMask.NameToLayer("Enemy"));
             dashParticles.Stop();
             player.isDashing = false;
         }
@@ -97,7 +98,7 @@ public class DashScript : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 1f, layerToHit);
             if (hit.collider != null)
             {
-                Debug.Log(hit.collider.gameObject.name, hit.collider.gameObject);
+                if (debug) Debug.Log(hit.collider.gameObject.name, hit.collider.gameObject);
                 return true;
             }
         }

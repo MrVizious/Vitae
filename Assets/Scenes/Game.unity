@@ -5249,7 +5249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304759878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.61, y: -1.06, z: 0}
+  m_LocalPosition: {x: 1.97, y: -9.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 811127006}
@@ -15098,72 +15098,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1001 &1374350546
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1498454104}
-    m_Modifications:
-    - target: {fileID: 3006786764569548992, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
-      propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1498454105}
-    - target: {fileID: 3006786764569548994, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
-      propertyPath: m_Name
-      value: Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 3006786764569548995, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3006786764569548995, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3006786764569548995, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3006786764569548995, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3006786764569548995, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3006786764569548995, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3006786764569548995, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3006786764569548995, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3006786764569548995, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3006786764569548995, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3006786764569548995, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
---- !u!4 &1397015094 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3006786764569548995, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
-  m_PrefabInstance: {fileID: 1374350546}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1397357169
 GameObject:
   m_ObjectHideFlags: 0
@@ -15482,7 +15416,6 @@ Transform:
   - {fileID: 759201183}
   - {fileID: 1265549157}
   - {fileID: 451224485}
-  - {fileID: 1397015094}
   m_Father: {fileID: 327106532}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15495,28 +15428,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1498454103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaaa7317916f74af3bc3293e5c78ecb4, type: 3}
+  m_Script: {fileID: 11500000, guid: d5fb3b0dc6b1330e8880c0352045766e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 304759881}
-  enemies: []
-  OnRoomCleared:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  spawnedEnemies: []
-  cleared: 0
+  isOpen: 0
+  obstacles: {fileID: 759201182}
+  foreground: {fileID: 451224484}
 --- !u!1 &1507087986
 GameObject:
   m_ObjectHideFlags: 0
@@ -15737,7 +15654,15 @@ PrefabInstance:
     - target: {fileID: 3006786764569548992, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1770257716}
+      objectReference: {fileID: 1498454105}
+    - target: {fileID: 3006786764569548992, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
+      propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006786764569548992, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
+      propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Door, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3006786764569548994, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
       propertyPath: m_Name
       value: Button
@@ -15822,13 +15747,13 @@ MonoBehaviour:
   OnRoomCleared:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1498454105}
+        m_TargetAssemblyTypeName: Door, Assembly-CSharp
+        m_MethodName: Open
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -16665,7 +16590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1904344766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17504,9 +17429,37 @@ PrefabInstance:
     m_TransformParent: {fileID: 1561656804}
     m_Modifications:
     - target: {fileID: 3006786764569548992, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
+      propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006786764569548992, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
+      propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006786764569548992, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1561656803}
+    - target: {fileID: 3006786764569548992, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
+      propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1498454105}
+    - target: {fileID: 3006786764569548992, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
+      propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006786764569548992, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
+      propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Close
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006786764569548992, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
+      propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Door, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3006786764569548992, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
+      propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3006786764569548994, guid: 1b13d45b8f66c700cace23a46e51b255, type: 3}
       propertyPath: m_Name
       value: Button

@@ -5,12 +5,9 @@ using UnityEngine;
 public abstract class ProjectileScript : MonoBehaviour
 {
     public ProjectileData data;
-
     protected Vector2 direction;
 
-
     public void DestroyProjectile() {
-        //Debug.Log("Destroying projectile");
         Destroy(gameObject);
     }
 

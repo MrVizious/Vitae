@@ -6,6 +6,7 @@ public class SeekerEnemy : Enemy
 {
     private float secondsSinceLastDamage = 0f;
     private IEnumerator damagingCoroutine = null;
+
     private void OnCollisionEnter2D(Collision2D other) {
         if (debug) Debug.Log("Collision entered!");
         if (other.gameObject.tag.Equals("Player"))
@@ -53,4 +54,5 @@ public class SeekerEnemy : Enemy
             }
         }
     }
+
 }

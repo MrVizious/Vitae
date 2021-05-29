@@ -23,7 +23,6 @@ public class RoomController : MonoBehaviour
                 enemies.Add(enemy.gameObject);
             }
         }
-        OnRoomCleared = new UnityEvent();
         foreach (GameObject enemy in enemies)
         {
             enemy.SetActive(false);
@@ -66,6 +65,7 @@ public class RoomController : MonoBehaviour
         {
             cleared = true;
             OnRoomCleared.Invoke();
+            Debug.Log("Room cleared!");
         }
     }
 }

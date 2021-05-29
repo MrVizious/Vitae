@@ -9,7 +9,7 @@ public class ShooterScript : MonoBehaviour
     public GameObject projectile;
 
     public void Shoot(InputAction.CallbackContext context) {
-        if (context.started && Time.timeScale > 0f)
+        if (gameObject.activeSelf && context.started && Time.timeScale > 0f)
         {
             GameObject newProjectile = Instantiate(projectile, transform.position, transform.rotation);
             newProjectile.GetComponent<ProjectileScript>().SetDirection(player.lookDirection.normalized);

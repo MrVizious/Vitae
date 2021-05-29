@@ -8,18 +8,18 @@ public class DashScript : MonoBehaviour
     public PlayerData player;
     public ParticleSystem dashParticles;
     private Rigidbody2D rb;
-    private IEnumerator dashCoroutine;
+    private IEnumerator dashCoroutine = null;
     private bool walled = false;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
+        dashCoroutine = null;
     }
 
     public void Dash(InputAction.CallbackContext context) {
-        if (Time.timeScale > 0f)
+        if (Time.timeScale > 0f && this.enabled)
         {
 
-            Debug.Log("Dash started!");
             if (context.started && dashCoroutine == null && !player.isDashing)
             {
                 Vector2 dashDirection = player.movementDirection;

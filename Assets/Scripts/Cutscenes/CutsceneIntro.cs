@@ -10,6 +10,7 @@ public class CutsceneIntro : MonoBehaviour
     public float fadeSpeed = 0.07f;
     private void Start() {
         DialogController.getInstance().BeginDialog(dialog);
+
         DialogController.getInstance().OnDialogEnded.AddListener(
             delegate
             {
@@ -29,8 +30,9 @@ public class CutsceneIntro : MonoBehaviour
             );
             yield return new WaitForEndOfFrame();
         }
-        Destroy(darkCanvas.gameObject);
+        Destroy(darkCanvas.transform.parent.gameObject);
         Destroy(gameObject);
     }
+
 
 }

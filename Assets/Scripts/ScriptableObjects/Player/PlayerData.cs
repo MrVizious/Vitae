@@ -27,4 +27,14 @@ public class PlayerData : ScriptableObject
     public float dashSpeed = 80;
 
     [HideInInspector] public bool isDashing = false;
+
+    private void Awake() {
+        Reset();
+    }
+
+    public void Reset() {
+        movementDirection = Vector2.zero;
+        lookDirection = Vector2.right;
+        isDashing = false;
+    }
 }

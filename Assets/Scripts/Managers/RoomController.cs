@@ -7,12 +7,12 @@ public class RoomController : MonoBehaviour
 {
     //TODO: Create a GameManager with player references
     public Transform player;
-    public List<GameObject> enemies;
+    public List<Door> entryDoors;
+    public List<Door> exitDoors;
     public UnityEvent onRoomCleared;
-    public UnityEvent onReset;
-    public UnityEvent onEnemiesSpawned;
-    [SerializeField] private List<GameObject> spawnedEnemies;
     [SerializeField] private bool cleared = false;
+    private List<GameObject> enemies;
+    [SerializeField] private List<GameObject> spawnedEnemies;
 
 
     void Start() {
@@ -34,6 +34,16 @@ public class RoomController : MonoBehaviour
     public void SpawnEnemies() {
         if (!cleared && spawnedEnemies.Count == 0)
         {
+            // Close Doors
+            foreach (Door door in entryDoors)
+            {
+                door.Close();
+            }
+            foreach (Door door in exitDoors)
+            {
+                door.Close();
+            }
+
             spawnedEnemies = new List<GameObject>();
             foreach (GameObject enemy in enemies)
             {
@@ -49,7 +59,6 @@ public class RoomController : MonoBehaviour
                 );
                 spawnedEnemies.Add(newEnemy);
             }
-            onEnemiesSpawned.Invoke();
         }
     }
 
@@ -68,12 +77,33 @@ public class RoomController : MonoBehaviour
         {
             cleared = true;
             onRoomCleared.Invoke();
+
+            //Open doors
+            foreach (Door door in entryDoors)
+            {
+                door.Open();
+            }
+            foreach (Door door in exitDoors)
+            {
+                door.Open();
+            }
+
             Debug.Log("Room cleared!");
         }
     }
 
     public void Reset() {
         DestroySpawnedEnemies();
-        if (cleared) onReset.Invoke();
+        if (cleared)
+        {
+            foreach (Door door in entryDoors)
+            {
+                door.Open();
+            }
+            foreach (Door door in exitDoors)
+            {
+                door.Open();
+            }
+        }
     }
 }

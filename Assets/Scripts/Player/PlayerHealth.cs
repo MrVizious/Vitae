@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour
 {
     public bool debug = false;
     public PlayerData player;
+    public UnityEvent onPlayerDie;
     [SerializeField] private float currentHealth;
 
     private void Start() {
-        currentHealth = player.maxHealth;
+        Reset();
     }
 
     public void Damage(float damageAmount) {
@@ -23,7 +25,10 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void Die() {
-        Destroy(gameObject);
-        SceneController.QuitGame();
+        onPlayerDie.Invoke();
+    }
+
+    public void Reset() {
+        currentHealth = player.maxHealth;
     }
 }

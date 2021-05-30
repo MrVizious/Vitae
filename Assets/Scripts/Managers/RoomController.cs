@@ -8,7 +8,9 @@ public class RoomController : MonoBehaviour
     //TODO: Create a GameManager with player references
     public Transform player;
     public List<GameObject> enemies;
-    public UnityEvent OnRoomCleared;
+    public UnityEvent onRoomCleared;
+    public UnityEvent onReset;
+    public UnityEvent onEnemiesSpawned;
     [SerializeField] private List<GameObject> spawnedEnemies;
     [SerializeField] private bool cleared = false;
 
@@ -47,6 +49,7 @@ public class RoomController : MonoBehaviour
                 );
                 spawnedEnemies.Add(newEnemy);
             }
+            onEnemiesSpawned.Invoke();
         }
     }
 
@@ -64,8 +67,13 @@ public class RoomController : MonoBehaviour
         if (spawnedEnemies.Count <= 0)
         {
             cleared = true;
-            OnRoomCleared.Invoke();
+            onRoomCleared.Invoke();
             Debug.Log("Room cleared!");
         }
+    }
+
+    public void Reset() {
+        DestroySpawnedEnemies();
+        if (cleared) onReset.Invoke();
     }
 }

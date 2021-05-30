@@ -7,8 +7,10 @@ public class DialogData : ScriptableObject
 {
     public List<Sentence> sentences;
     public int currentSentenceIndex;
+    public bool completed = false;
 
     private void OnEnable() {
+        completed = false;
         currentSentenceIndex = 0;
     }
 

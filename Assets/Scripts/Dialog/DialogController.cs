@@ -51,7 +51,7 @@ public class DialogController : MonoBehaviour
         }
     }
     public void BeginDialog(DialogData newDialog) {
-
+        if (newDialog.completed) return;
         Time.timeScale = 0;
         setDialog(newDialog);
         speaking = true;
@@ -65,6 +65,7 @@ public class DialogController : MonoBehaviour
         canvas.SetActive(speaking);
         OnDialogEnded.Invoke();
         GameController.getInstance().player.player.movementDirection = Vector2.zero;
+        dialog.completed = true;
     }
 
     public void setDialog(DialogData newDialog) {

@@ -48,7 +48,19 @@ public class WalkingBombEnemy : Enemy
     }
 
     private IEnumerator ExplodeCoroutine() {
-        yield return new WaitForSeconds(data.delay);
+        float secondsWaitingToExplode = 0f;
+        while (secondsWaitingToExplode < data.delay)
+        {
+            secondsWaitingToExplode += Time.deltaTime;
+            spriteRenderer.color = new Color(
+                1f,
+                (Mathf.Cos(secondsWaitingToExplode * 10) + 1) / 2,
+                (Mathf.Cos(secondsWaitingToExplode * 10) + 1) / 2,
+                spriteRenderer.color.a
+            );
+            yield return new WaitForEndOfFrame();
+        }
+        //yield return new WaitForSeconds(data.delay);
         Explode();
         StartCoroutine(ExplosionAnimationCoroutine());
     }

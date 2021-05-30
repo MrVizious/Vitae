@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void Damage(float damageAmount) {
-        //TODO: Can't be harmed during dash
+        if (player.isDashing) return;
         if (debug) Debug.Log("Getting " + damageAmount + " points of damage");
         currentHealth -= damageAmount;
         if (currentHealth <= 0)

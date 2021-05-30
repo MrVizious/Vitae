@@ -10882,7 +10882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6567941666009263048, guid: 1771909c88867d7feb11cd378c2b9cc1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.4999995
+      value: -5.5
       objectReference: {fileID: 0}
     - target: {fileID: 6567941666009263048, guid: 1771909c88867d7feb11cd378c2b9cc1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10922,7 +10922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8260440075189972336, guid: 1771909c88867d7feb11cd378c2b9cc1, type: 3}
       propertyPath: m_Name
-      value: BombEnemy (1)
+      value: BombEnemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1771909c88867d7feb11cd378c2b9cc1, type: 3}

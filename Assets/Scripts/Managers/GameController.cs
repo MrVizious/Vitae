@@ -5,8 +5,21 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+
     public PlayerHealth player;
     public List<RoomController> rooms;
+
+    private static GameController instance;
+    private void Awake() {
+        if (instance == null)
+        {
+            instance = this;
+        }
+
+    }
+    public static GameController getInstance() {
+        return instance;
+    }
 
     private void Start() {
         player = FindObjectOfType<PlayerHealth>();

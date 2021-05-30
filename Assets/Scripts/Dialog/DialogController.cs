@@ -64,6 +64,7 @@ public class DialogController : MonoBehaviour
         speaking = false;
         canvas.SetActive(speaking);
         OnDialogEnded.Invoke();
+        GameController.getInstance().player.player.movementDirection = Vector2.zero;
     }
 
     public void setDialog(DialogData newDialog) {

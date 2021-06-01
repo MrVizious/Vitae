@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SimpleProjectile : ProjectileScript
 {
+    public float rotationSpeed = 1000f;
     private float secondsAlive;
     private void Start() {
         secondsAlive = 0f;
+        StartCoroutine(RotatingCoroutine());
     }
 
     private void Update() {
@@ -23,6 +25,15 @@ public class SimpleProjectile : ProjectileScript
         {
             other.gameObject.GetComponent<Enemy>()?.Damage(data.damage);
             DestroyProjectile();
+        }
+    }
+
+    private IEnumerator RotatingCoroutine() {
+        while (true)
+        {
+            Debug.Log("Rotating!");
+            transform.Rotate(new Vector3(0, 0, rotationSpeed * Time.deltaTime));
+            yield return new WaitForEndOfFrame();
         }
     }
 }

@@ -23,12 +23,6 @@ public class Button : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag.Equals("Player"))
         {
-            spriteRenderer.color = new Color(
-                initialColor.r * colorDimmingFactor,
-                initialColor.g * colorDimmingFactor,
-                initialColor.b * colorDimmingFactor,
-                initialColor.a
-            );
             OnActivated.Invoke();
         }
     }

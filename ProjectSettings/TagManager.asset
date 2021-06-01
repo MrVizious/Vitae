@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Obstacle
   - Pit
+  - Button
   layers:
   - Default
   - TransparentFX

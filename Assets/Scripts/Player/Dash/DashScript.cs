@@ -52,7 +52,11 @@ public class DashScript : MonoBehaviour
         float timeSinceDashStarted = 0f;
         while (timeSinceDashStarted < duration)
         {
+#if UNITY_WEBGL
+            rb.MovePosition((Vector2)transform.position + direction.normalized * speed * Time.deltaTime / 3f);
+#else
             rb.MovePosition((Vector2)transform.position + direction.normalized * speed * Time.deltaTime);
+#endif
             yield return new WaitForEndOfFrame();
             timeSinceDashStarted += Time.deltaTime;
         }

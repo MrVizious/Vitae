@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4df1d6ce939af8e8bf675ce27cc585, type: 3}
+  m_Name: Explanation
+  m_EditorClassIdentifier: 
+  sentences:
+  - character: {fileID: 11400000, guid: 22eaf37bbc1d6efe4ba72d1531f742ae, type: 2}
+    text: Bueno, veo que al menos conservas las funciones motoras
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 22eaf37bbc1d6efe4ba72d1531f742ae, type: 2}
+    text: No siempre se puede dar por sentado
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "De qu\xE9 hablas?"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 22eaf37bbc1d6efe4ba72d1531f742ae, type: 2}
+    text: "Esto es muy sencillo. T\xFA te llamabas...?"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Javi
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "Bueno, Javier Riera Chirivella... C\xF3mo de formal deber\xEDa ser?"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 22eaf37bbc1d6efe4ba72d1531f742ae, type: 2}
+    text: "Me da bastante igual, como est\xE9s m\xE1s c\xF3modo"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Yo me llamo Vitae, encantada
+    secondsPerCharacter: 0.08
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Soy un hada, y mi trabajo es ayudarte
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "Ayudarme? A qu\xE9?"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: A ver, acaso no andas buscando trabajo?
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "Eh, s\xED, claro"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Pues aqu\xED me tienes!"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Vas a buscarme curro programando videojuegos?
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Bueno, a ver
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Voy a ayudarte a que te cojan. Entrenarte un poco y tal
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "(Que est\xE1s un poco verde, si te soy sincera...)"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "Lo he o\xEDdo..."
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Mejor, as\xED sabes mi opini\xF3n"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Vamos a comenzar con algo b\xE1sico"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Has usado SSH alguna vez?
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "Yo? Eh, bueno, s\xED"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "En Maxlinear y en Kenmei estaba constantemente us\xE1ndolo"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "En qu\xE9 y en qu\xE9?"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "Dos empresas donde estuve trabajando de ingeniero inform\xE1tico"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Hac\xEDas juegos?"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "No, pero s\xED que aprend\xED bastantes cosas. SSH, por ejemplo"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Bueno, pues demu\xE9stralo"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Veamos si eres capaz de mandarle el comando a esa puerta de que se abra
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Para ello, solo tienes que hacer una cosa muy sencilla
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Pulsa el bot\xF3n"
+    secondsPerCharacter: 0.09
+  currentSentenceIndex: 31
+  completed: 1

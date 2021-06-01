@@ -13,22 +13,29 @@ MonoBehaviour:
   m_Name: WakeUp
   m_EditorClassIdentifier: 
   sentences:
-  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+  - character: {fileID: 11400000, guid: 22eaf37bbc1d6efe4ba72d1531f742ae, type: 2}
     text: Arriba, despierta!
     secondsPerCharacter: 0.05
-  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+  - character: {fileID: 11400000, guid: 22eaf37bbc1d6efe4ba72d1531f742ae, type: 2}
     text: Venga, arriba!
     secondsPerCharacter: 0.05
   - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
     text: Nnngh?
     secondsPerCharacter: 0.05
-  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+  - character: {fileID: 11400000, guid: 22eaf37bbc1d6efe4ba72d1531f742ae, type: 2}
     text: "Que despiertes, le\xF1e!"
     secondsPerCharacter: 0.05
-  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
-    text: Y no te olvides de
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "Pero qu\xE9 pasa?"
     secondsPerCharacter: 0.05
-  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
-    text: "Pulsar el bot\xF3n"
-    secondsPerCharacter: 0.2
-  currentSentenceIndex: 6
+  - character: {fileID: 11400000, guid: 22eaf37bbc1d6efe4ba72d1531f742ae, type: 2}
+    text: "Despierta y camina un poco, desp\xE9jate"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 22eaf37bbc1d6efe4ba72d1531f742ae, type: 2}
+    text: Seguro que lo has hecho antes, prueba a
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 22eaf37bbc1d6efe4ba72d1531f742ae, type: 2}
+    text: Moverte con las teclas WASD
+    secondsPerCharacter: 0.08
+  currentSentenceIndex: 8
+  completed: 1

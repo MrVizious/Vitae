@@ -24,24 +24,34 @@ public class Button : MonoBehaviour
         if (other.tag.Equals("Player"))
         {
             OnActivated.Invoke();
+            DimSprite();
         }
     }
 
     private void OnTriggerStay2D(Collider2D other) {
         if (other.tag.Equals("Player"))
         {
-            spriteRenderer.color = new Color(
-                initialColor.r * colorDimmingFactor,
-                initialColor.g * colorDimmingFactor,
-                initialColor.b * colorDimmingFactor,
-                initialColor.a
-            );
+            DimSprite();
         }
     }
     private void OnTriggerExit2D(Collider2D other) {
         if (other.tag.Equals("Player"))
         {
-            spriteRenderer.color = initialColor;
+            UndimSprite();
         }
+    }
+
+    private void DimSprite() {
+
+        spriteRenderer.color = new Color(
+            initialColor.r * colorDimmingFactor,
+            initialColor.g * colorDimmingFactor,
+            initialColor.b * colorDimmingFactor,
+            initialColor.a
+        );
+    }
+
+    private void UndimSprite() {
+        spriteRenderer.color = initialColor;
     }
 }

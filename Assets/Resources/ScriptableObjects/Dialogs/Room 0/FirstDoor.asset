@@ -17,13 +17,16 @@ MonoBehaviour:
     text: Bien! Se ha abierto!
     secondsPerCharacter: 0.05
   - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
-    text: Entra en la otra sala
+    text: Entra en la siguiente sala
     secondsPerCharacter: 0.05
   - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
-    text: "Pero qu\xE9 est\xE1 pasando?"
+    text: "Qu\xE9 hay ah\xED?"
     secondsPerCharacter: 0.05
   - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
     text: "T\xFA entra, hazme caso"
     secondsPerCharacter: 0.05
-  currentSentenceIndex: 4
-  completed: 1
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Lo que hay ah\xED es de vital importancia para un programador"
+    secondsPerCharacter: 0.05
+  currentSentenceIndex: 0
+  completed: 0

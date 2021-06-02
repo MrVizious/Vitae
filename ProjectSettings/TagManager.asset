@@ -64,6 +64,9 @@ TagManager:
   - name: Foreground
     uniqueID: 3683951405
     locked: 0
+  - name: Door
+    uniqueID: 3708597559
+    locked: 0
   - name: Particles
     uniqueID: 1400927207
     locked: 0

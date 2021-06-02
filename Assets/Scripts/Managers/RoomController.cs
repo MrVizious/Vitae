@@ -75,20 +75,7 @@ public class RoomController : MonoBehaviour
         Destroy(enemyKilled);
         if (spawnedEnemies.Count <= 0)
         {
-            cleared = true;
-            onRoomCleared.Invoke();
-
-            //Open doors
-            foreach (Door door in entryDoors)
-            {
-                door.Open();
-            }
-            foreach (Door door in exitDoors)
-            {
-                door.Open();
-            }
-
-            Debug.Log("Room cleared!");
+            ClearRoom();
         }
     }
 
@@ -105,5 +92,24 @@ public class RoomController : MonoBehaviour
                 door.Open();
             }
         }
+    }
+
+    public void ClearRoom() {
+        cleared = true;
+        onRoomCleared.Invoke();
+
+        DestroySpawnedEnemies();
+
+        //Open doors
+        foreach (Door door in entryDoors)
+        {
+            door.Open();
+        }
+        foreach (Door door in exitDoors)
+        {
+            door.Open();
+        }
+
+        Debug.Log("Room cleared!");
     }
 }

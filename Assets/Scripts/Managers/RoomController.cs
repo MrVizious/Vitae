@@ -10,6 +10,7 @@ public class RoomController : MonoBehaviour
     public List<Door> entryDoors;
     public List<Door> exitDoors;
     public UnityEvent onRoomCleared;
+    public UnityEvent onReset;
     [SerializeField] private bool cleared = false;
     private List<GameObject> enemies;
     [SerializeField] private List<GameObject> spawnedEnemies;
@@ -91,6 +92,7 @@ public class RoomController : MonoBehaviour
             {
                 door.Open();
             }
+            onReset.Invoke();
         }
     }
 

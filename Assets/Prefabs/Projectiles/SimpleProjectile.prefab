@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 1570cc5052b4fbf1aac246d3cb324865, type: 2}
-  rotationSpeed: 1000
+  rotationSpeed: 500
 --- !u!212 &6803217761788689639
 SpriteRenderer:
   m_ObjectHideFlags: 0

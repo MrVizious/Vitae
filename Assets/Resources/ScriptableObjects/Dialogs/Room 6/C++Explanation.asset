@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4df1d6ce939af8e8bf675ce27cc585, type: 3}
+  m_Name: C++Explanation
+  m_EditorClassIdentifier: 
+  sentences:
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Por las barbas de Tim Schaffer!
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Ya has avanzado tanto?
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "Tanto? Por qu\xE9 lo dices?"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Eso de ah\xED es C++!"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Ah, pues es verdad
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Con que las armas pesadas, eh?
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Esto se usa cuando hace falta que algo vaya realmente r\xE1pido"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "S\xED, eso tengo entendido"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "Como es de m\xE1s bajo nivel, se puede hacer c\xF3digo m\xE1s preciso"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Y al compilarlo, va a toda leche!
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Pues aprende algo de ello y ve a por \xE9l!"
+    secondsPerCharacter: 0.05
+  currentSentenceIndex: 0
+  completed: 0

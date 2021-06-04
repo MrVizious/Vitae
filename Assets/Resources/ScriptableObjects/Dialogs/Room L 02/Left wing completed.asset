@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4df1d6ce939af8e8bf675ce27cc585, type: 3}
+  m_Name: Left wing completed
+  m_EditorClassIdentifier: 
+  sentences:
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Bufff... Bastantes enemigos, eh?
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "S\xED, la verdad"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Pero nada mal hecho, Javi!
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Y es m\xE1s..."
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: He notado una puerta abrirse
+    secondsPerCharacter: 0.08
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Una puerta?
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "S\xED"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Crees que ser\xE1 una de las dos que estaban juntas en el otro cuarto?"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Tiene pinta
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Vamos a echar un ojo, a ver
+    secondsPerCharacter: 0.05
+  currentSentenceIndex: 0
+  completed: 0

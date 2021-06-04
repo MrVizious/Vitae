@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4df1d6ce939af8e8bf675ce27cc585, type: 3}
+  m_Name: CronEnemies
+  m_EditorClassIdentifier: 
+  sentences:
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "Qu\xE9 es eso?"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Eh... Sabes c\xF3mo usar cron?"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "S\xED, claro... M\xE1s o menos"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Bueno, pues esto que hay ah\xED, son tareas de cron"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Tareas mal programadas, que te explotan en la cara cuando no lo esperas
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Eso significa que...
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "S\xED... Kaboom"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Si te acercas mucho o los derrotas, parpadear\xE1n y explotar\xE1n al
+      poco"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "As\xED que ve con cuidado!"
+    secondsPerCharacter: 0.05
+  currentSentenceIndex: 0
+  completed: 0

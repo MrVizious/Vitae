@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public bool debug = false;
     public PlayerData player;
     public UnityEvent onPlayerDie;
-    [SerializeField] private float currentHealth;
+    public float currentHealth;
 
     private void Start() {
         Reset();

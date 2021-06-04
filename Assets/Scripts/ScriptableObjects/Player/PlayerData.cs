@@ -15,7 +15,7 @@ public class PlayerData : ScriptableObject
 
     [Header("Movement Variables")]
     public float movementSpeed = 5f;
-    [HideInInspector] public Vector2 movementDirection;
+    public Vector2 movementDirection;
     [HideInInspector] public Vector2 lookDirection;
 
 
@@ -26,14 +26,14 @@ public class PlayerData : ScriptableObject
     public float dashDuration = 0.3f;
     public float dashSpeed = 80;
 
-    [HideInInspector] public bool isDashing = false;
+    public bool isDashing = false;
 
     private void Awake() {
         Reset();
     }
 
     public void Reset() {
-        movementDirection = Vector2.zero;
+        //movementDirection = Vector2.zero;
         lookDirection = Vector2.right;
         isDashing = false;
     }

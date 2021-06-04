@@ -15,6 +15,7 @@ MonoBehaviour:
   maxHealth: 100
   movementSpeed: 5
   movementDirection: {x: 0, y: 0}
-  lookDirection: {x: 0.34767744, y: 0.114591464}
+  lookDirection: {x: 0.5007947, y: 0.39855304}
   dashDuration: 0.3
   dashSpeed: 80
+  isDashing: 0

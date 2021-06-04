@@ -32,7 +32,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void MovementDirectionChanged(InputAction.CallbackContext context) {
-        if (Time.timeScale > 0f) player.movementDirection = context.ReadValue<Vector2>();
+        if (Time.timeScale > 0f)
+        {
+            player.movementDirection = context.ReadValue<Vector2>();
+            Debug.Log("Movement Direction Changed to " + player.movementDirection);
+        }
     }
 
     private void UpdateLookDirection() {

@@ -9,6 +9,10 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
+    public static void LoadMainMenu() {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public static void QuitGame() {
         // save any game data here
 #if UNITY_EDITOR
@@ -19,4 +23,5 @@ public class SceneController : MonoBehaviour
          Application.Quit();
 #endif
     }
+
 }

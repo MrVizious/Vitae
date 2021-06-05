@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4df1d6ce939af8e8bf675ce27cc585, type: 3}
+  m_Name: UnityObtain
+  m_EditorClassIdentifier: 
+  sentences:
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Lo he...
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Conseguido?
+    secondsPerCharacter: 0.08
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Parece que s\xED..."
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Bueno, al menos esta parte
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "C\xF3mo que esta parte?"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Hacer videojuegos no es una cosa que se aprenda una vez y ya
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Tendr\xE1s que seguir avanzando y mejorando, d\xEDa a d\xEDa"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Pero desde luego, ya est\xE1s preparado para comenzar"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Oye, Vitae...
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "S\xED?"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Muchas gracias
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Has sido una gran ayuda
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Aqu\xED para ayudarte con lo que sea"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: 'No me olvides y recuerda:'
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "Nunca pagues m\xE1s de 20 euros por un juego de ordenador"
+    secondsPerCharacter: 0.08
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: "Qu\xE9?"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: "No s\xE9. No tengo claro por qu\xE9 he dicho eso"
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+    text: Nos vemos, Javi
+    secondsPerCharacter: 0.05
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+    text: Nos vemos, Vitae
+    secondsPerCharacter: 0.05
+  currentSentenceIndex: 19
+  completed: 1

@@ -9,6 +9,8 @@ public class CutsceneIntro : Cutscene
     public float fadeSpeed = 0.07f;
     private void Start() {
         Begin();
+        DialogController.getInstance().BeginDialog(dialog);
+
         DialogController.getInstance().OnDialogEnded.AddListener(
             delegate
             {
@@ -28,7 +30,7 @@ public class CutsceneIntro : Cutscene
             );
             yield return new WaitForEndOfFrame();
         }
-        Destroy(darkImage.transform.parent.gameObject);
+        //Destroy(darkImage.transform.parent.gameObject);
         Destroy(gameObject);
     }
 }

@@ -7,9 +7,9 @@ public class Cutscene : MonoBehaviour
 {
     public UnityEvent OnCutsceneEnded;
     public DialogData dialog;
-    public void Begin() {
+    public virtual void Begin() {
 
-        DialogController.getInstance().BeginDialog(dialog);
+        //DialogController.getInstance().BeginDialog(dialog);
 
         DialogController.getInstance().OnDialogEnded.AddListener(() => OnCutsceneEnded.Invoke());
 

@@ -31,7 +31,7 @@ public class SimpleProjectile : ProjectileScript
     private IEnumerator RotatingCoroutine() {
         while (true)
         {
-            Debug.Log("Rotating!");
+            //Debug.Log("Rotating!");
             transform.Rotate(new Vector3(0, 0, rotationSpeed * Time.deltaTime));
             yield return new WaitForEndOfFrame();
         }

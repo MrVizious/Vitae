@@ -10,40 +10,60 @@ public class EnemySpawner : MonoBehaviour
     public float radius;
     public int initialNumberOfEnemies;
     public float secondsBetweenSpawns;
-
-
     public GameObject target;
 
-    private float secondsSinceLastSpawn = 0f;
+    private IEnumerator spawnCoroutine;
+    [SerializeField] private List<GameObject> enemiesSpawned;
 
     private void Start() {
+        enemiesSpawned = new List<GameObject>();
+    }
+    public void BeginSpawner() {
+        DespawnEnemies();
+
         for (int i = 0; i < initialNumberOfEnemies; i++)
         {
             Spawn();
         }
+
+        spawnCoroutine = SpawnCoroutine();
+        StartCoroutine(spawnCoroutine);
+
     }
 
-    private void Update() {
-        secondsSinceLastSpawn += Time.deltaTime;
-        if (secondsSinceLastSpawn >= secondsBetweenSpawns)
+    private IEnumerator SpawnCoroutine() {
+        while (true)
         {
-            secondsSinceLastSpawn = 0f;
+            yield return new WaitForSeconds(secondsBetweenSpawns);
             Spawn();
         }
     }
 
     public void Spawn() {
         int n = Random.Range(0, enemyPrefabs.Count);
-        Collider2D anyCollision;
+
         Vector2 newPosition;
-        do
-        {
-            newPosition = (Vector2)transform.position + new Vector2(Random.Range(-radius, radius), Random.Range(-radius, radius));
-            anyCollision = Physics2D.OverlapCircle(newPosition, 5f);
-        }
-        while (anyCollision != null);
-        //Debug.Log("Spawning");
+        newPosition = (Vector2)transform.position + new Vector2(Random.Range(-radius, radius), Random.Range(-radius, radius));
+
         GameObject newGameObject = Instantiate(enemyPrefabs[n], newPosition, Quaternion.identity);
-        newGameObject.GetComponent<Enemy>().SetTarget(target.transform);
+        newGameObject.GetComponent<Enemy>().Spawn(target.transform);
+        enemiesSpawned.Add(newGameObject);
+    }
+
+    private void DespawnEnemies() {
+        Debug.Log("Despawning enemies");
+        //Debug.Log("Size: " + enemiesSpawned.Count);
+        foreach (GameObject enemy in enemiesSpawned.ToArray())
+        {
+            Debug.Log("Despawning " + enemy);
+            Destroy(enemy);
+        }
+        enemiesSpawned.Clear();
+    }
+
+    public void Reset() {
+        DespawnEnemies();
+        StopCoroutine(spawnCoroutine);
+        spawnCoroutine = null;
     }
 }

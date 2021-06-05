@@ -18,9 +18,12 @@ public class PlayerAnimation : MonoBehaviour
     }
 
     public void UpdateLookAnimation() {
-        animator.SetFloat("Look_X", player.lookDirection.x);
-        animator.SetFloat("Look_Y", player.lookDirection.y);
-        animator.SetFloat("Speed", player.movementDirection.magnitude);
+        if (Time.timeScale > 0.9f)
+        {
+            animator.SetFloat("Look_X", player.lookDirection.x);
+            animator.SetFloat("Look_Y", player.lookDirection.y);
+            animator.SetFloat("Speed", player.movementDirection.magnitude);
+        }
     }
 
 }

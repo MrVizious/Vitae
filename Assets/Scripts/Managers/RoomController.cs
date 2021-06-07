@@ -83,6 +83,7 @@ public class RoomController : MonoBehaviour
     }
 
     public void Reset() {
+        Debug.Log("Resetting");
         DestroySpawnedEnemies();
         if (cleared)
         {

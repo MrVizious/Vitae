@@ -63,7 +63,10 @@ public class EnemySpawner : MonoBehaviour
 
     public void Reset() {
         DespawnEnemies();
-        StopCoroutine(spawnCoroutine);
+        if (spawnCoroutine != null)
+        {
+            StopCoroutine(spawnCoroutine);
+        }
         spawnCoroutine = null;
     }
 }

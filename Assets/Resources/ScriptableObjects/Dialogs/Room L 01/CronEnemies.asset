@@ -23,7 +23,7 @@ MonoBehaviour:
     text: "S\xED, claro... M\xE1s o menos"
     secondsPerCharacter: 0.05
   - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
-    text: "Bueno, pues esto que hay ah\xED, son tareas de cron"
+    text: "Bueno, pues esto que hay ah\xED son tareas de cron"
     secondsPerCharacter: 0.05
   - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
     text: Tareas mal programadas, que te explotan en la cara cuando no lo esperas

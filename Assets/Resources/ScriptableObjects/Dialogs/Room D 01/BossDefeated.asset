@@ -20,15 +20,15 @@ MonoBehaviour:
     text: "QU\xC9 HA SIDO ESO?!?!"
     secondsPerCharacter: 0.05
   - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
-    text: Boss final, evidentemente
+    text: El jefe final, evidentemente
     secondsPerCharacter: 0.05
   - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
     text: "Si nos ponemos con clich\xE9s, los hacemos todos"
     secondsPerCharacter: 0.05
-  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
     text: "Sabes que en el m\xE1ster de programaci\xF3n y dise\xF1o de videojuegos,"
     secondsPerCharacter: 0.05
-  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
+  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
     text: el que hice en la UOC, me dijeron que romper lo establecido no es mala
       idea?
     secondsPerCharacter: 0.05

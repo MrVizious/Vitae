@@ -22,7 +22,7 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
     text: Me acerco a los botones de git que encuentre, no?
     secondsPerCharacter: 0.05
-  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
     text: "S\xED, y as\xED reaparecer\xE1s aqu\xED si te pasa algo malo"
     secondsPerCharacter: 0.05
   - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}

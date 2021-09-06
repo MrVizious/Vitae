@@ -46,7 +46,7 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
     text: Y bastante peligrosos
     secondsPerCharacter: 0.05
-  - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
+  - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
     text: "Pero ahora los podr\xE1s derrotar!"
     secondsPerCharacter: 0.05
   - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
@@ -70,5 +70,5 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 7ff0c968d769731e2b8e7e12d0025c09, type: 2}
     text: Y disparo con el click...
     secondsPerCharacter: 0.1
-  currentSentenceIndex: 20
-  completed: 1
+  currentSentenceIndex: 0
+  completed: 0

@@ -53,7 +53,7 @@ MonoBehaviour:
     text: "Si, en cambio, est\xE1s movi\xE9ndote,"
     secondsPerCharacter: 0.05
   - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
-    text: "Al pulsar espacio lo har\xE1s en la direcci\xF3n en que est\xE9s andando"
+    text: "Al pulsar espacio, ir\xE1s en la direcci\xF3n en que est\xE9s andando"
     secondsPerCharacter: 0.05
   - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
     text: "B\xE1sicamente, ir\xE1s tan r\xE1pido como el propio C++!"

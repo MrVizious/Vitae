@@ -104,7 +104,7 @@ MonoBehaviour:
     text: Para ello, solo tienes que hacer una cosa muy sencilla
     secondsPerCharacter: 0.05
   - character: {fileID: 11400000, guid: 303a063a441ba21edb230db3953bd6ad, type: 2}
-    text: "Pulsa el bot\xF3n"
+    text: "Pisa el bot\xF3n"
     secondsPerCharacter: 0.09
-  currentSentenceIndex: 31
-  completed: 1
+  currentSentenceIndex: 0
+  completed: 0
